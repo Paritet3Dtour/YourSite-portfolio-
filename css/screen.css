@@ -1,0 +1,326 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a,
+.header .nav .search,
+.header .nav .button-go, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img, .header .nav .search img, .header .nav .button-go img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+body {
+  font-size: 62.5%;
+  /* font-size 1em = 10px */
+  width: 1002px;
+  margin: 0 auto;
+  font-family: "NobileRegular";
+  position: relative;
+}
+
+/*HEADER*/
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 1002px;
+  height: 68px;
+  background: -webkit- linear-gradient(to top, #eaeaea 0%, #cccccc 50%, #e2e2e2 52%, #ffffff 100%);
+  background: -moz- linear-gradient(to top, #eaeaea 0%, #cccccc 50%, #e2e2e2 52%, #ffffff 100%);
+  background: -ms- linear-gradient(to top, #eaeaea 0%, #cccccc 50%, #e2e2e2 52%, #ffffff 100%);
+  background: -o- linear-gradient(to top, #eaeaea 0%, #cccccc 50%, #e2e2e2 52%, #ffffff 100%);
+  background: linear-gradient(to top, #eaeaea 0%, #cccccc 50%, #e2e2e2 52%, #ffffff 100%);
+  border: 1px solid #d8d8d8;
+  -webkit-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.47);
+  -moz-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.47);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.47);
+  behavior: url("../css/PIE.htc");
+}
+.header .nav a, .header .nav .search, .header .nav .button-go {
+  float: left;
+  width: 90px;
+  height: 68px;
+  border-left: 2px solid #d8d8d8;
+  font-size: 1.1em;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #666666;
+  text-align: center;
+  line-height: 70px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+}
+.header .nav a:hover, .header .nav .search:hover, .header .nav .button-go:hover {
+  color: #0087c7;
+  background: -webkit- linear-gradient(to top, #f3f3f3 0%, #e1e1e1 53%, #f1f1f1 54%, #ffffff 100%);
+  background: -moz- linear-gradient(to top, #f3f3f3 0%, #e1e1e1 53%, #f1f1f1 54%, #ffffff 100%);
+  background: -ms- linear-gradient(to top, #f3f3f3 0%, #e1e1e1 53%, #f1f1f1 54%, #ffffff 100%);
+  background: -o- linear-gradient(to top, #f3f3f3 0%, #e1e1e1 53%, #f1f1f1 54%, #ffffff 100%);
+  background: linear-gradient(to top, #f3f3f3 0%, #e1e1e1 53%, #f1f1f1 54%, #ffffff 100%);
+}
+.header .nav .a-one {
+  margin-left: 69px;
+}
+.header .nav .a-last {
+  border-right: 2px solid #d8d8d8;
+}
+.header .nav .search {
+  width: 307px;
+  height: 40px;
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.15);
+  behavior: url("../css/PIE.htc");
+  border: 1px solid #d1d1d1;
+  text-align: left;
+  margin: 15px 0 0 15px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  text-transform: none;
+  padding-left: 20px;
+  cursor: text;
+  font-family: "NobileItalic";
+}
+.header .nav .button-go {
+  width: 55px;
+  background: -webkit- linear-gradient(to top, #f3f3f3 0%, #e1e1e1 53%, #f1f1f1 54%, #ffffff 100%);
+  background: -moz- linear-gradient(to top, #f3f3f3 0%, #e1e1e1 53%, #f1f1f1 54%, #ffffff 100%);
+  background: -ms- linear-gradient(to top, #f3f3f3 0%, #e1e1e1 53%, #f1f1f1 54%, #ffffff 100%);
+  background: -o- linear-gradient(to top, #f3f3f3 0%, #e1e1e1 53%, #f1f1f1 54%, #ffffff 100%);
+  background: linear-gradient(to top, #f3f3f3 0%, #e1e1e1 53%, #f1f1f1 54%, #ffffff 100%);
+  border: 1px solid #d8d8d8;
+  -webkit-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.47);
+  -moz-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.47);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.47);
+  behavior: url("../css/PIE.htc");
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  height: 40px;
+  margin: 15px 0 0 15px;
+  line-height: 40px;
+  text-transform: none;
+}
+
+/*HEADER END*/
+/*YOURSITE*/
+.yoursite {
+  margin-top: 70px;
+  position: relative;
+  width: 1002px;
+  height: 346px;
+  background-color: #f1f1f1;
+  border: 1px solid #d9d9d9;
+}
+.yoursite .logo {
+  width: 198px;
+  height: 27px;
+  text-shadow: 1px 1.7px 0 white;
+  behavior: url("../css/PIE.htc");
+  font-size: 3.6em;
+  font-weight: 400;
+  color: #666666;
+  margin: 43px 0 0 63px;
+  text-transform: uppercase;
+  font-family: "NobileBold";
+  display: inline-block;
+  cursor: pointer;
+}
+.yoursite .logo-blue {
+  color: #0087c7;
+  margin-left: 0px;
+  margin-top: 0px;
+}
+.yoursite .slogan {
+  width: 133px;
+  height: 13px;
+  text-shadow: 1px 1.7px 0 white;
+  behavior: url("../css/PIE.htc");
+  color: #a5a5a5;
+  font-size: 1.1em;
+  font-weight: 400;
+  display: inline-block;
+  margin: 0 0 5px 15px;
+  overflow: hidden;
+}
+.yoursite .image {
+  margin: 36px 0 0 63px;
+  display: inline-block;
+}
+.yoursite .blockquote-header {
+  text-shadow: 1px 1.7px 0 white;
+  behavior: url("../css/PIE.htc");
+  color: #0087c7;
+  font-size: 2.4em;
+  font-weight: 400;
+  display: inline-block;
+  margin: 0 0 0 25px;
+  overflow: hidden;
+  font-family: "NobileBold";
+  border-bottom: 2px solid #d8d8d8;
+  position: absolute;
+  top: 130px;
+}
+.yoursite .blockquote {
+  position: absolute;
+  top: 160px;
+  font-size: 1.1em;
+  line-height: 24px;
+  color: #b6b6b6;
+  display: inline-block;
+  margin: 0 0 0 25px;
+  word-spacing: 6px;
+}
+
+.blockquote-blue {
+  color: #0087c7;
+  font-family: "NobileItalic";
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+/*YOURSITE END*/
+/*DOLOR*/
+.dolor {
+  width: 1004px;
+  height: 650px;
+  background-color: #f6f6f6;
+  position: relative;
+  /*FOOTER DOLOR*/
+  /*FOOTER DOLOR END*/
+}
+.dolor .features {
+  position: relative;
+  width: 349px;
+  height: 146px;
+  border: 1px solid #d0d0d0;
+  -webkit-box-shadow: inset 0 0 0 1px white;
+  -moz-box-shadow: inset 0 0 0 1px white;
+  box-shadow: inset 0 0 0 1px white;
+  behavior: url("../css/PIE.htc");
+  display: inline-block;
+  margin: 23px 0 0 63px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  background-color: #f1f1f1;
+}
+.dolor .features-image {
+  display: inline-block;
+  margin: 29px 0 0 28px;
+}
+.dolor .features-lorem, .dolor .dolor-content-lorem {
+  font-size: 1.1em;
+  color: #b6b6b6;
+  display: inline-block;
+  line-height: 19px;
+  margin: 23px 0 0 20px;
+  position: absolute;
+  word-spacing: 6px;
+}
+.dolor .dolor-content {
+  width: 507px;
+  height: 490px;
+  border: 1px solid #d0d0d0;
+  -webkit-box-shadow: inset 0 0 0 1px white;
+  -moz-box-shadow: inset 0 0 0 1px white;
+  box-shadow: inset 0 0 0 1px white;
+  behavior: url("../css/PIE.htc");
+  position: absolute;
+  top: 0;
+  margin: 20px 0 0 430px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  background-color: #f1f1f1;
+}
+.dolor .dolor-content-header {
+  color: #666666;
+  font-family: "NobileBold";
+  font-size: 24px;
+  margin: 26px 0 0 30px;
+}
+.dolor .dolor-content-lorem {
+  line-height: 24px;
+  word-spacing: 6px;
+}
+.dolor .footer {
+  margin: 20px 0 0 63px;
+  width: 876px;
+  height: 88px;
+  background-color: #f1f1f1;
+  border: 1px solid #d0d0d0;
+  -webkit-box-shadow: inset 0 0 0 1px white;
+  -moz-box-shadow: inset 0 0 0 1px white;
+  box-shadow: inset 0 0 0 1px white;
+  behavior: url("../css/PIE.htc");
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+}
+.dolor .footer-copyright, .dolor .footer-autor {
+  color: #666666;
+  font-size: 1.1em;
+  margin: 44px 0 0 24px;
+  display: inline-block;
+  word-spacing: 6px;
+  font-weight: bold;
+}
+.dolor .footer-autor {
+  margin-left: 400px;
+}
+
+/*DOLOR END*/

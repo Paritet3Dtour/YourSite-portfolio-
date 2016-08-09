@@ -1,0 +1,262 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/css3";
+
+$font-size-normal: 1.1em;
+$font-color-normal: rgb(182, 182, 182);
+$font-color-blue: rgb(0, 135, 199);
+$text-shadow: 1px 1.7px 0 white;
+$box-shadow: inset 0 0 0 1px white;
+
+@mixin vendor-gradient($value){
+	background: -webkit-$value;
+	background: -moz-$value;
+	background: -ms-$value;
+	background: -o-$value;
+	background: $value;
+}
+@mixin vendor-box-shadow($value){
+ -webkit-box-shadow:$value;
+ -moz-box-shadow:$value;
+ box-shadow:$value;
+}
+@mixin vendor-border-radius($value){
+ -webkit-border-radius:$value;
+ -moz-border-radius:$value;
+ border-radius:$value;
+}
+body {  
+  font-size: 62.5%; /* font-size 1em = 10px */  
+  width: 1002px;
+  margin: 0 auto;
+  font-family: "NobileRegular";
+  position: relative;
+} 
+/*HEADER*/
+.header{
+	position: fixed;
+ 	top: 0;
+ 	z-index: 10;
+	width: 1002px;
+	height: 68px;
+	@include vendor-gradient(linear-gradient(to top, #eaeaea 0%, #ccc 50%, #e2e2e2 52%, white 100%));
+	border: 1px solid #d8d8d8;
+	@include vendor-box-shadow(inset 0 0 0 1px rgba(255, 255, 255, 0.47));
+	behavior: url("../css/PIE.htc");
+	.nav{
+		a{
+			float: left;
+			width: 90px;
+			height: 68px;
+			border-left: 2px solid #d8d8d8;
+			font-size: $font-size-normal;
+			font-weight: 400;
+			text-transform: uppercase;
+			color: rgb(102, 102, 102);
+			text-align: center;
+			line-height: 70px;
+			cursor: pointer;
+			text-decoration: none;
+			font-weight: bold;
+		}
+	a:hover{
+		color: $font-color-blue;
+		@include vendor-gradient(linear-gradient(to top, rgb(243, 243, 243) 0%, rgb(225, 225, 225) 53%, rgb(241, 241, 241) 54%, white 100%));
+	}
+	.a-one{
+		margin-left: 69px;
+	}
+	.a-last{
+		border-right: 2px solid #d8d8d8;
+	}
+	.search{
+		@extend a;
+  	width: 307px;
+  	height: 40px;
+  	@include vendor-box-shadow(inset 0 0 5px rgba(0, 0, 0, 0.15));
+  	behavior: url("../css/PIE.htc");
+  	border: 1px solid rgb(209, 209, 209);
+  	text-align: left;
+  	margin: 15px 0 0 15px;
+  	@include vendor-border-radius(20px);
+  	text-transform: none;
+  	padding-left: 20px;
+  	cursor: text;
+  	font-family: "NobileItalic";
+	}
+	.button-go{
+		@extend a;
+		width: 55px;
+		@include vendor-gradient(linear-gradient(to top, rgb(243, 243, 243) 0%, rgb(225, 225, 225) 53%, rgb(241, 241, 241) 54%, white 100%));
+		border: 1px solid rgb(216, 216, 216);
+		@include vendor-box-shadow(inset 0 0 0 1px rgba(255, 255, 255, 0.47));
+		behavior: url("../css/PIE.htc");
+		@include vendor-border-radius(20px);
+		height: 40px;
+		margin: 15px 0 0 15px;
+		line-height: 40px;
+		text-transform: none;
+		}
+	}
+}
+/*HEADER END*/
+/*YOURSITE*/
+.yoursite{
+	margin-top: 70px;
+	position: relative;
+	width: 1002px;
+	height: 346px;
+	background-color: rgb(241, 241, 241);
+	border: 1px solid rgb(217, 217, 217);
+	.logo{
+		width: 198px;
+		height: 27px;
+		text-shadow: $text-shadow;
+		behavior: url("../css/PIE.htc");
+		font-size: 3.6em;
+		font-weight: 400;
+		color: rgb(102, 102, 102);
+		margin: 43px 0 0 63px;
+		text-transform: uppercase;
+		font-family: "NobileBold";
+		display: inline-block;
+		cursor: pointer;
+	}
+	.logo-blue{
+		color: $font-color-blue;
+		margin-left: 0px;
+		margin-top: 0px;
+	}
+	.slogan{
+		width: 133px;
+		height: 13px;
+		text-shadow: $text-shadow;
+		behavior: url("../css/PIE.htc");
+		color: rgb(165, 165, 165);
+		font-size: $font-size-normal;
+		font-weight: 400;
+		display: inline-block;	
+		margin: 0 0 5px 15px;
+		overflow: hidden;
+	}
+	.image{
+		margin: 36px 0 0 63px;
+		display: inline-block;
+	}
+	.blockquote-header{
+		text-shadow: $text-shadow;
+		behavior: url("../css/PIE.htc");
+		color: $font-color-blue;
+		font-size: 2.4em;
+		font-weight: 400;
+		display: inline-block;
+		margin: 0 0 0 25px;
+		overflow: hidden;
+		font-family: "NobileBold";
+		border-bottom: 2px solid #d8d8d8;
+		position: absolute;
+		top: 130px;
+	}
+	.blockquote{
+		position: absolute;
+		top: 160px;
+		font-size: $font-size-normal;
+		line-height: 24px;
+		color: $font-color-normal;
+		display: inline-block;
+		margin: 0 0 0 25px;
+		word-spacing: 6px;
+	}
+}
+
+.blockquote-blue{
+		color: $font-color-blue;
+		font-family: "NobileItalic";
+		cursor: pointer;
+		font-size: 1.2em;
+	}
+/*YOURSITE END*/
+/*DOLOR*/
+.dolor{
+	width: 1004px;
+	height: 650px;
+	background-color: #f6f6f6;
+	position: relative;
+	.features{
+	position: relative;
+	width: 349px;
+	height: 146px;
+	border: 1px solid rgb(208, 208, 208);
+	@include vendor-box-shadow($box-shadow);
+	behavior: url("../css/PIE.htc");
+	display: inline-block;
+	margin: 23px 0 0 63px;
+	@include vendor-border-radius(30px);
+	background-color: rgb(241, 241, 241);
+	}
+	.features-image{
+		display: inline-block;
+		margin: 29px 0 0 28px;
+	}
+	.features-lorem{
+		font-size: $font-size-normal;
+		color: $font-color-normal;
+		display: inline-block;
+		line-height: 19px;
+		margin: 23px 0 0 20px;
+		position: absolute;
+		word-spacing: 6px;
+	}
+	.dolor-content{
+		width: 507px;
+		height: 490px;
+		border: 1px solid rgb(208, 208, 208);
+		@include vendor-box-shadow($box-shadow);
+		behavior: url("../css/PIE.htc");
+		position: absolute;
+		top: 0;
+		margin: 20px 0 0 430px;
+		@include vendor-border-radius(30px);
+		background-color: rgb(241, 241, 241);
+	}
+	.dolor-content-header{
+		color: rgb(102, 102, 102);
+		font-family: "NobileBold";
+		font-size: 24px;
+		margin: 26px 0 0 30px;
+	}
+	.dolor-content-lorem{
+		@extend .features-lorem;
+		line-height: 24px;
+		word-spacing: 6px;
+	}
+	/*FOOTER DOLOR*/
+	.footer{
+		margin: 20px 0 0 63px;
+		width: 876px;
+		height: 88px;
+		background-color: rgb(241, 241, 241);
+		border: 1px solid rgb(208, 208, 208);
+		@include vendor-box-shadow($box-shadow);
+		behavior: url("../css/PIE.htc");
+		@include vendor-border-radius(30px);
+	}
+	.footer-copyright{
+		color: rgb(102, 102, 102);
+		font-size: $font-size-normal;
+		margin: 44px 0 0 24px;
+		display: inline-block;
+		word-spacing: 6px;
+		font-weight: bold;
+	}
+	.footer-autor{
+		@extend .footer-copyright;
+		margin-left: 400px;
+	}
+	/*FOOTER DOLOR END*/
+}
+/*DOLOR END*/

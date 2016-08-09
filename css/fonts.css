@@ -1,0 +1,21 @@
+@font-face{
+	font-family: "NobileRegular";
+	src: url("../fonts/Nobile/Nobile-Regular.ttf");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face{
+	font-family: "NobileBold";
+	src: url("../fonts/Nobile/Nobile-Bold.ttf");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face{
+	font-family: "NobileItalic";
+	src: url("../fonts/Nobile/Nobile-Italic.ttf");
+	font-style: normal;
+	font-weight: normal;
+}
+
